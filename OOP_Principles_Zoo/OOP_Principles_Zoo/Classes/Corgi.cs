@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    class Corgi : Dog
+    public class Corgi : Dog
     {
         //Properties
         public override string AnimalName { get; set; } = "Corgi";

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    abstract class Mammal : Animal
+    public abstract class Mammal : Animal
     {
         //Properties
         public override bool IsReal { get; set; } = true;
