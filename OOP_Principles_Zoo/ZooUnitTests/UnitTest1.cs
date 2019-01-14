@@ -78,6 +78,77 @@ namespace ZooUnitTests
             Assert.Equal(animalMessage, testMessage);
         }
 
+        [Fact]
+        public void SamoyedCanSamoyedEat()
+        {
+            Samoyed testSamoyed = new Samoyed();
+            string testMessage = testSamoyed.SamoyedEat();
+            Assert.Equal("The white " + testSamoyed.AnimalName + " says: I am eating some kibble.", testMessage);
+        }
+        [Fact]
+        public void SamoyedEatAndEatAreDistinct()
+        {
+            Samoyed testSamoyed = new Samoyed();
+            string testMessage = testSamoyed.SamoyedEat();
+            string testMessageTwo = testSamoyed.Eat();
+            Assert.NotEqual(testMessage, testMessageTwo);
+        }
+        [Fact]
+        public void SamoyedCanWalk()
+        {
+            Samoyed testSamoyed = new Samoyed();
+            string testMessage = testSamoyed.Walk();
+            Assert.Equal("Please walk the " + testSamoyed.AnimalName + ".", testMessage);
+        }
+        [Fact]
+        public void SamoyedCanBrushSelf()
+        {
+            Samoyed testSamoyed = new Samoyed();
+            string testMessage = testSamoyed.BrushSelf();
+            Assert.Equal("The " + testSamoyed.AnimalName + " is brushing their own coat. The " + testSamoyed.AnimalName + "'s second coat sheds.", testMessage);
+        }
+        [Fact]
+        public void SamoyedCanBark()
+        {
+            Samoyed testSamoyed = new Samoyed();
+            string testMessage = testSamoyed.Bark();
+            Assert.Equal("The " + testSamoyed.AnimalName + " howls.", testMessage);
+        }
+        [Fact]
+        public void SamoyedCanRollOver()
+        {
+            Samoyed testSamoyed = new Samoyed();
+            string testMessage = testSamoyed.RollOver();
+            Assert.Equal("The samoyed rolls on the ground, making their coat dirty.", testMessage);
+        }
+
+        //[Fact]
+        //public void DogCanEatFromCorgi()
+        //{
+        //    Corgi testCorgi = new Corgi();
+        //    string testMessage = testCorgi.Eat();
+        //    Dog testDog = new Corgi();
+        //    string dogMessage = testDog.Eat();
+        //    Assert.Equal(dogMessage, testMessage);
+        //}
+        //[Fact]
+        //public void MammalCanBrushSelfFromCorgi()
+        //{
+        //    Corgi testCorgi = new Corgi();
+        //    string testMessage = testCorgi.BrushSelf();
+        //    Mammal testMammal = new Corgi();
+        //    string mammalMessage = testMammal.BrushSelf();
+        //    Assert.Equal(mammalMessage, testMessage);
+        //}
+        //[Fact]
+        //public void AnimalCanWalkFromCorgi()
+        //{
+        //    Corgi testCorgi = new Corgi();
+        //    string testMessage = testCorgi.Walk();
+        //    Animal testAnimal = new Corgi();
+        //    string animalMessage = testAnimal.Walk();
+        //    Assert.Equal(animalMessage, testMessage);
+        //}
 
     }
-}
+    }
