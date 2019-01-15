@@ -5,7 +5,7 @@ using OOP_Principles_Zoo.Interfaces;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    public class Dragon : Reptile, IFly
+    public class Dragon : Reptile, IHibernate, IFly
     {
         public override string AnimalName { get; set; } = "Dragon";
         public override bool BreathesFire { get; set; } = true;
