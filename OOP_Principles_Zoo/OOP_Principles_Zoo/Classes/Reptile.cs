@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    abstract class Reptile : Animal
+    public abstract class Reptile : Animal
     {
         public virtual bool BreathesFire { get; set; } = false;
 

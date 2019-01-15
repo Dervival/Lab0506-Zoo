@@ -4,9 +4,10 @@ using System.Text;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    class Eagle : Bird
+    public class Eagle : Bird
     {
         public override string AnimalName { get; set; } = "Eagle";
+        public override string LivesIn { get; set; } = "Countryside";
 
         //Methods
         public override string Eat()

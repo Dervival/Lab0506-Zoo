@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    class Pidgeon : Bird
+    public class Pidgeon : Bird
     {
         public override string AnimalName { get; set; } = "Pidgeon";
 

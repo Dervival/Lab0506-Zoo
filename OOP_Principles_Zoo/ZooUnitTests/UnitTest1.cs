@@ -6,6 +6,7 @@ namespace ZooUnitTests
 {
     public class UnitTest1
     {
+        //Corgi tests
         [Fact]
         public void CorgiCanEat()
         {
@@ -78,6 +79,7 @@ namespace ZooUnitTests
             Assert.Equal(animalMessage, testMessage);
         }
 
+        //Samoyed tests
         [Fact]
         public void SamoyedCanSamoyedEat()
         {
@@ -121,6 +123,79 @@ namespace ZooUnitTests
             string testMessage = testSamoyed.RollOver();
             Assert.Equal("The samoyed rolls on the ground, making their coat dirty.", testMessage);
         }
+
+        //Pidgeon tests
+        [Fact]
+        public void PidgeonCanEat()
+        {
+            Pidgeon testPidgeon = new Pidgeon();
+            string testMessage = testPidgeon.Eat();
+            Assert.Equal("The Pidgeon is eating some birdseed.", testMessage);
+        }
+        [Fact]
+        public void PidgeonCanFlap()
+        {
+            Pidgeon testPidgeon = new Pidgeon();
+            string testMessage = testPidgeon.Flap();
+            Assert.Equal("The pidgeon flutters its wings.", testMessage);
+        }
+        [Fact]
+        public void PidgeonCanCoo()
+        {
+            Pidgeon testPidgeon = new Pidgeon();
+            string testMessage = testPidgeon.Coo();
+            Assert.Equal("The pidgeon goes 'Coo!'", testMessage);
+        }
+
+        [Fact]
+        public void PidgeonInheritsWalk()
+        {
+            //Walk is in Bird, not Pidgeon
+            Pidgeon testPidgeon = new Pidgeon();
+            string testMessage = testPidgeon.Walk();
+            Assert.Equal("The Pidgeon walks around its nest in the city.", testMessage);
+        }
+        [Fact]
+        public void PidgeonInheritsLivesIn()
+        {
+            //LivesIn is in Bird
+            Pidgeon testPidgeon = new Pidgeon();
+            Assert.Equal("city", testPidgeon.LivesIn);
+        }
+        //Eagle tests
+        [Fact]
+        public void EagleCanEat()
+        {
+            Eagle testEagle = new Eagle();
+            string testMessage = testEagle.Eat();
+            Assert.Equal("The eagle is now eating a mouse.", testMessage);
+        }
+        [Fact]
+        public void EagleCanFlap()
+        {
+            Eagle testEagle = new Eagle();
+            string testMessage = testEagle.Flap();
+            Assert.Equal("The eagle spreads its wings.", testMessage);
+        }
+
+        [Fact]
+        public void EagleOverridesLivesIn()
+        {
+            //LivesIn is in Bird
+            Bird testBird = new Pidgeon();
+            Eagle testEagle = new Eagle();
+            Assert.NotEqual(testEagle.LivesIn, testBird.LivesIn);
+        }
+        [Fact]
+        public void EagleInheritsWalk()
+        {
+            //Walk is in Bird, not Pidgeon
+            Eagle testEagle = new Eagle();
+            string testMessage = testEagle.Walk();
+            Assert.Equal("The Eagle walks around its nest in the Countryside.", testMessage);
+        }
         
+        //Snake tests
+        //Dragon tests
     }
 }
