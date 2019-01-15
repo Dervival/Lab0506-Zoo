@@ -9,7 +9,7 @@ namespace OOP_Principles_Zoo.Classes
         //Properties
         public abstract bool IsReal { get; set; }
         public abstract string AnimalName { get; set; }
-        public virtual int NumberOfLegs { get; set; }
+        public virtual int NumberOfLegs { get; set; } = 4;
 
         //Methods
         public abstract string Eat();
