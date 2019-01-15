@@ -40,11 +40,13 @@ namespace OOP_Principles_Zoo.Classes
             {
                 flyMessage = "The pidgeon takes flight!";
                 IsFlying = true;
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
             else
             {
                 flyMessage = "The pidgeon is already flying.";
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
         }
@@ -53,13 +55,15 @@ namespace OOP_Principles_Zoo.Classes
             string flyMessage = "";
             if (IsFlying)
             {
-                flyMessage = "The pidgeon lands at + " + location + ".";
+                flyMessage = "The pidgeon lands at " + location + ".";
                 IsFlying = false;
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
             else
             {
                 flyMessage = "The pidgeon is not currently flying, so it cannot land.";
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
         }

@@ -69,11 +69,13 @@ namespace OOP_Principles_Zoo.Classes
                 Flap();
                 flyMessage = "The eagle takes off!";
                 IsFlying = true;
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
             else
             {
                 flyMessage = "The eagle is already flying.";
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
         }
@@ -82,13 +84,15 @@ namespace OOP_Principles_Zoo.Classes
             string flyMessage = "";
             if (IsFlying)
             {
-                flyMessage = "The eagle lands at + " + location + ".";
+                flyMessage = "The eagle lands at " + location + ".";
                 IsFlying = false;
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
             else
             {
                 flyMessage = "The eagle is not currently flying, so it cannot land.";
+                Console.WriteLine(flyMessage);
                 return flyMessage;
             }
         }

@@ -34,6 +34,10 @@ namespace OOP_Principles_Zoo
             pete.Sleep();
             pete.Walk();
             pete.Flap();
+            pete.TakeOff();
+            pete.TakeOff();
+            pete.Land("home");
+            pete.Land("elseswhere");
             pete.Coo();
             Console.WriteLine("\nMeet Ethan the " + ethan.AnimalName + ".");
             ethan.Eat();
@@ -41,17 +45,25 @@ namespace OOP_Principles_Zoo
             ethan.Walk();
             ethan.Flap();
             ethan.Hunt("snake");
+            ethan.TakeOff();
+            ethan.Land("the zoo");
             Console.WriteLine("\nMeet Sal the " + sal.AnimalName + ".");
+            sal.StopHibernating();
             sal.Eat();
             sal.Sleep();
             sal.Walk();
             sal.Firebreath();
+            sal.StartHibernating();
+            sal.StopHibernating();
             Console.WriteLine("\nFinally, meet Dan the " + dan.AnimalName + ".");
             dan.Eat();
             dan.Sleep();
             dan.Walk();
             dan.Firebreath();
             dan.Fly();
+            dan.TakeOff();
+            dan.Land("your car");
+            dan.StartHibernating();
             Console.WriteLine("\nThank you for visiting the zoo.");
         }
     }
