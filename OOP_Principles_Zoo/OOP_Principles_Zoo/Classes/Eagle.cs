@@ -61,5 +61,36 @@ namespace OOP_Principles_Zoo.Classes
             }
             return huntSuccess;
         }
+        public override string TakeOff()
+        {
+            string flyMessage = "";
+            if (!IsFlying)
+            {
+                Flap();
+                flyMessage = "The eagle takes off!";
+                IsFlying = true;
+                return flyMessage;
+            }
+            else
+            {
+                flyMessage = "The eagle is already flying.";
+                return flyMessage;
+            }
+        }
+        public override string Land(string location)
+        {
+            string flyMessage = "";
+            if (IsFlying)
+            {
+                flyMessage = "The eagle lands at + " + location + ".";
+                IsFlying = false;
+                return flyMessage;
+            }
+            else
+            {
+                flyMessage = "The eagle is not currently flying, so it cannot land.";
+                return flyMessage;
+            }
+        }
     }
 }

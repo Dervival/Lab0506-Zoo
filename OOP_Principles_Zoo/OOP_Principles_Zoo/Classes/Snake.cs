@@ -39,11 +39,11 @@ namespace OOP_Principles_Zoo.Classes
             string hibernateMessage = "";
             if (IsHibernating)
             {
-                hibernateMessage = "The dragon is already hibernating!";
+                hibernateMessage = "The snake is already hibernating!";
                 Console.WriteLine(hibernateMessage);
                 return hibernateMessage;
             }
-            hibernateMessage = "The dragon begins to hibernate.";
+            hibernateMessage = "The snake begins to hibernate.";
             Console.WriteLine(hibernateMessage);
             IsHibernating = true;
             return hibernateMessage;
@@ -53,11 +53,11 @@ namespace OOP_Principles_Zoo.Classes
             string hibernateMessage = "";
             if (!IsHibernating)
             {
-                hibernateMessage = "The dragon is not hibernating, so cannot stop hibernating.";
+                hibernateMessage = "The snake is not hibernating, so cannot stop hibernating.";
                 Console.WriteLine(hibernateMessage);
                 return hibernateMessage;
             }
-            hibernateMessage = "The dragon stops hibernating.";
+            hibernateMessage = "The snake stops hibernating.";
             Console.WriteLine(hibernateMessage);
             IsHibernating = false;
             return hibernateMessage;

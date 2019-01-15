@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using OOP_Principles_Zoo.Interfaces;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    public class Dragon : Reptile
+    public class Dragon : Reptile, IFly
     {
         public override string AnimalName { get; set; } = "Dragon";
         public override bool BreathesFire { get; set; } = true;
         public override bool IsReal { get; set; } = false;
         //Interface properties
         public override bool IsHibernating { get; set; } = false;
+        public bool IsFlying { get; set; } = true;
 
         public override string Eat()
         {
@@ -66,6 +68,36 @@ namespace OOP_Principles_Zoo.Classes
             Console.WriteLine(hibernateMessage);
             IsHibernating = false;
             return hibernateMessage;
+        }
+        public string TakeOff()
+        {
+            string flyMessage = "";
+            if (!IsFlying)
+            {
+                flyMessage = "The pidgeon takes flight!";
+                IsFlying = true;
+                return flyMessage;
+            }
+            else
+            {
+                flyMessage = "The pidgeon is already flying.";
+                return flyMessage;
+            }
+        }
+        public string Land(string location)
+        {
+            string flyMessage = "";
+            if (IsFlying)
+            {
+                flyMessage = "The pidgeon lands at + " + location + ".";
+                IsFlying = false;
+                return flyMessage;
+            }
+            else
+            {
+                flyMessage = "The pidgeon is not currently flying, so it cannot land.";
+                return flyMessage;
+            }
         }
     }
 }
