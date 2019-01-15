@@ -121,34 +121,6 @@ namespace ZooUnitTests
             string testMessage = testSamoyed.RollOver();
             Assert.Equal("The samoyed rolls on the ground, making their coat dirty.", testMessage);
         }
-
-        //[Fact]
-        //public void DogCanEatFromCorgi()
-        //{
-        //    Corgi testCorgi = new Corgi();
-        //    string testMessage = testCorgi.Eat();
-        //    Dog testDog = new Corgi();
-        //    string dogMessage = testDog.Eat();
-        //    Assert.Equal(dogMessage, testMessage);
-        //}
-        //[Fact]
-        //public void MammalCanBrushSelfFromCorgi()
-        //{
-        //    Corgi testCorgi = new Corgi();
-        //    string testMessage = testCorgi.BrushSelf();
-        //    Mammal testMammal = new Corgi();
-        //    string mammalMessage = testMammal.BrushSelf();
-        //    Assert.Equal(mammalMessage, testMessage);
-        //}
-        //[Fact]
-        //public void AnimalCanWalkFromCorgi()
-        //{
-        //    Corgi testCorgi = new Corgi();
-        //    string testMessage = testCorgi.Walk();
-        //    Animal testAnimal = new Corgi();
-        //    string animalMessage = testAnimal.Walk();
-        //    Assert.Equal(animalMessage, testMessage);
-        //}
-
+        
     }
-    }
+}
