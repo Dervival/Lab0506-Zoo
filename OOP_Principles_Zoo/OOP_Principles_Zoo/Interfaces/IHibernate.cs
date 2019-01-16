@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Principles_Zoo.Interfaces
 {
-    interface IHibernate
+    public interface IHibernate
     {
         bool IsHibernating { get; set; }
         string StartHibernating();
