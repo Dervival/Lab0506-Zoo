@@ -27,6 +27,21 @@ namespace OOP_Principles_Zoo.Classes
             Console.WriteLine(walkMessage);
             return walkMessage;
         }
+        public override string Firebreath()
+        {
+            if (BreathesFire)
+            {
+                string fireMessage = "The " + AnimalName + " breathes fire at you!";
+                Console.WriteLine(fireMessage);
+                return fireMessage;
+            }
+            else
+            {
+                string fireMessage = "The " + AnimalName + " looks sadly at you, as it cannot breathe fire.";
+                Console.WriteLine(fireMessage);
+                return fireMessage;
+            }
+        }
 
         public string Fly()
         {

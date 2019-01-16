@@ -21,20 +21,11 @@ namespace OOP_Principles_Zoo.Classes
             return sleepMessage;
         }
 
-        public string Firebreath()
+        public virtual string Firebreath()
         {
-            if (BreathesFire)
-            {
-                string fireMessage = "The " + AnimalName + " breathes fire at you!";
-                Console.WriteLine(fireMessage);
-                return fireMessage;
-            }
-            else
-            {
-                string fireMessage = "The " + AnimalName + " looks sadly at you, as it cannot breathe fire.";
-                Console.WriteLine(fireMessage);
-                return fireMessage;
-            }
+            string fireMessage = "The " + AnimalName + " looks sadly at you, as it cannot breathe fire.";
+            Console.WriteLine(fireMessage);
+            return fireMessage;
         }
     }
 }
