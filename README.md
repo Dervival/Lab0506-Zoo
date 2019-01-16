@@ -39,6 +39,6 @@ See the bottom two pictures below.
 
 #### Screen captures:
 - ![System Design Image w/o interfaces](https://github.com/Dervival/Lab0506-Zoo/blob/master/ZooSystemDesign.PNG);
-- ![System Design Image w interfaces](https://github.com/Dervival/Lab0506-Zoo/blob/master/ZooSystemDesignWithInterfaces.PNG);
+- ![System Design Image w interfaces](https://github.com/Dervival/Lab0506-Zoo/blob/master/UpdatedZooSystemDesignWithInterfaces.PNG);
 - ![Part one of sample output of program](https://github.com/Dervival/Lab0506-Zoo/blob/master/OutputOne.PNG);
 - ![Part two of sample output of program](https://github.com/Dervival/Lab0506-Zoo/blob/master/OutputTwo.PNG);
