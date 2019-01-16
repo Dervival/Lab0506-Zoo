@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using OOP_Principles_Zoo.Classes;
+using OOP_Principles_Zoo.Interfaces;
 
 namespace ZooUnitTests
 {
@@ -196,6 +197,70 @@ namespace ZooUnitTests
         }
         
         //Snake tests
+        [Fact]
+        public void SnakeCanHibernateThroughInterface()
+        {
+            IHibernate testSnake = new Snake();
+            testSnake.IsHibernating = false;
+            string hibernateMessage = testSnake.StartHibernating();
+            Assert.Equal("The snake begins to hibernate.", hibernateMessage);
+        }
+        [Fact]
+        public void SnakeCanHibernateOnlyWhenNotHibernating()
+        {
+            IHibernate testSnake = new Snake();
+            testSnake.IsHibernating = true;
+            string hibernateMessage = testSnake.StartHibernating();
+            Assert.Equal("The snake is already hibernating!", hibernateMessage);
+        }
+        [Fact]
+        public void SnakeCanStopHibernatingThroughInterface()
+        {
+            IHibernate testSnake = new Snake();
+            testSnake.IsHibernating = true;
+            string hibernateMessage = testSnake.StopHibernating();
+            Assert.Equal("The snake stops hibernating.", hibernateMessage);
+        }
+        [Fact]
+        public void SnakeCanStopHibernatingOnlyWhenCurrentlyHibernating()
+        {
+            IHibernate testSnake = new Snake();
+            testSnake.IsHibernating = false;
+            string hibernateMessage = testSnake.StopHibernating();
+            Assert.Equal("The snake is not hibernating, so cannot stop hibernating.", hibernateMessage);
+        }
         //Dragon tests
+        [Fact]
+        public void DragonCanHibernateThroughInterface()
+        {
+            IHibernate testDragon = new Dragon();
+            testDragon.IsHibernating = false;
+            string hibernateMessage = testDragon.StartHibernating();
+            Assert.Equal("The dragon begins to hibernate.", hibernateMessage);
+        }
+        [Fact]
+        public void DragonCanStopHibernatingThroughInterface()
+        {
+            IHibernate testDragon = new Dragon();
+            testDragon.IsHibernating = true;
+            string hibernateMessage = testDragon.StopHibernating();
+            Assert.Equal("The dragon stops hibernating.", hibernateMessage);
+        }
+        [Fact]
+        public void DragonCanTakeOff()
+        {
+            IFly testDragon = new Dragon();
+            testDragon.IsFlying = false;
+            string flyMessage = testDragon.TakeOff();
+            Assert.Equal("The dragon takes flight!", flyMessage);
+        }
+        [Fact]
+        public void DragonCanLand()
+        {
+            IFly testDragon = new Dragon();
+            testDragon.IsFlying = true;
+            string flyMessage = testDragon.Land("home");
+            Assert.Equal("The dragon lands at home.", flyMessage);
+        }
     }
 }

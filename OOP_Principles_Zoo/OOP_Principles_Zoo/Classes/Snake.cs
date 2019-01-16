@@ -9,6 +9,8 @@ namespace OOP_Principles_Zoo.Classes
         public override string AnimalName { get; set; } = "Snake";
         public override int NumberOfLegs { get; set; } = 0;
         public override bool IsReal { get; set; } = true;
+        //Interface properties
+        public override bool IsHibernating { get; set; } = true;
 
         public override string Eat()
         {
@@ -29,6 +31,36 @@ namespace OOP_Principles_Zoo.Classes
             string walkMessage = "As the snake has no legs, it cannot walk.";
             Console.WriteLine(walkMessage);
             return walkMessage;
+        }
+
+        //Interface methods
+        public override string StartHibernating()
+        {
+            string hibernateMessage = "";
+            if (IsHibernating)
+            {
+                hibernateMessage = "The snake is already hibernating!";
+                Console.WriteLine(hibernateMessage);
+                return hibernateMessage;
+            }
+            hibernateMessage = "The snake begins to hibernate.";
+            Console.WriteLine(hibernateMessage);
+            IsHibernating = true;
+            return hibernateMessage;
+        }
+        public override string StopHibernating()
+        {
+            string hibernateMessage = "";
+            if (!IsHibernating)
+            {
+                hibernateMessage = "The snake is not hibernating, so cannot stop hibernating.";
+                Console.WriteLine(hibernateMessage);
+                return hibernateMessage;
+            }
+            hibernateMessage = "The snake stops hibernating.";
+            Console.WriteLine(hibernateMessage);
+            IsHibernating = false;
+            return hibernateMessage;
         }
     }
 }

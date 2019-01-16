@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using OOP_Principles_Zoo.Interfaces;
 
 namespace OOP_Principles_Zoo.Classes
 {
-    public abstract class Reptile : Animal
+    public abstract class Reptile : Animal, IHibernate
     {
         public virtual bool BreathesFire { get; set; } = false;
+
+        public abstract bool IsHibernating { get; set; }
+
+        public abstract string StartHibernating();
+        public abstract string StopHibernating();
 
         public override string Sleep()
         {
