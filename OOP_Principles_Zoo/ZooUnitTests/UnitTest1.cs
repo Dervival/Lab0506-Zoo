@@ -195,8 +195,23 @@ namespace ZooUnitTests
             string testMessage = testEagle.Walk();
             Assert.Equal("The Eagle walks around its nest in the Countryside.", testMessage);
         }
-        
+
         //Snake tests
+        [Fact]
+        public void SnakeInheritsVirtualFireBreathingBehaviorWithDefaultBreathesFire()
+        {
+            Snake testSnake = new Snake();
+            string fireMessage = testSnake.Firebreath();
+            Assert.Equal("The Snake looks sadly at you, as it cannot breathe fire.", fireMessage);
+        }
+        [Fact]
+        public void SnakeInheritsFireBreathingBehaviorWithModifiedBreathesFire()
+        {
+            Snake testSnake = new Snake();
+            testSnake.BreathesFire = true;
+            string fireMessage = testSnake.Firebreath();
+            Assert.Equal("The Snake looks sadly at you, as it cannot breathe fire.", fireMessage);
+        }
         [Fact]
         public void SnakeCanHibernateThroughInterface()
         {
@@ -230,6 +245,21 @@ namespace ZooUnitTests
             Assert.Equal("The snake is not hibernating, so cannot stop hibernating.", hibernateMessage);
         }
         //Dragon tests
+        [Fact]
+        public void DragonOverridesVirtualFireBreathingBehaviorWithDefaultBreathesFire()
+        {
+            Reptile testDragon = new Dragon();
+            string fireMessage = testDragon.Firebreath();
+            Assert.Equal("The Dragon breathes fire at you!", fireMessage);
+        }
+        [Fact]
+        public void DragonOverridesVirtualFireBreathingBehaviorWithModifiedBreathesFire()
+        {
+            Reptile testDragon = new Dragon();
+            testDragon.BreathesFire = false;
+            string fireMessage = testDragon.Firebreath();
+            Assert.Equal("The Dragon looks sadly at you, as it cannot breathe fire.", fireMessage);
+        }
         [Fact]
         public void DragonCanHibernateThroughInterface()
         {
